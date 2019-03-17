@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VHTM</title>
+</head>
+<body>
+<script>
+    let arrayNumber = ["0968888888", "0976666666", "0981234567", "01698929010", "0123456789", "0266782837", "0329878678"];
+    let data = "";
+    let regexp = /^[0]([9][678]|[3][2-9]|[8][6])[0-9]{7}$/;
+    for (let i = 0; i < arrayNumber.length; i++) {
+        let result = regexp.test(arrayNumber[i]);
+        if (result === true) {
+            data += (arrayNumber[i] + "<br>")
+        }
+    }
+    document.write(data)
+</script>
+</body>
+</html>
